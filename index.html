@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    body {
+  text-align: center;
+  background: linear-gradient(45deg,blue,red );
+
+p {
+  display: inline-block;
+}
+</style>
+<body>
+    <h1><%= todayDate %></h1>
+
+    <%for(let i=0;i<listItem.length;i++){ %>
+        <div>
+            <input type="checkbox">
+            <p><%=listItem[i] %></p>
+        </div>
+    <%} %>
+       
+   
+    <form action="/" method="POST">
+        <input type="text" name="input" autocomplete=off placeholder="New Item">
+
+        <button type="submit">Add</button>
+        <br>
+        <button type="submit" name="clear" value="clear">Clear</button>
+    </form>
+
+ </body>
+</body>
+</html>

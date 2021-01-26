@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To Do List</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <h2>
+        <%= todayDate %>
+    </h2>
+    <br>
+    <div class="box">
+        <%for(let i=0;i<listItem.length;i++){ %>
+            <div class="item">
+                <input type="checkbox" class="checkbox">
+                <p>
+                    <%=listItem[i] %>
+                </p>
+
+            </div>
+            <hr>
+            <%} %>
+
+
+                <form action="/" method="POST">
+                    <input class="new" type="text" name="input" autocomplete=off placeholder="New Item">
+
+                    <button class="submit" type="submit">+</button>
+                    <hr class="bottom">
+                </form>
+    </div>
+    <form action="/" method="POST">
+        <button class="clear" type="submit" name="clear" value="clear">Clear</button>
+    </form>
+</body>
+
+</html>
