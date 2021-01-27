@@ -86,14 +86,22 @@ input[type="checkbox"]:checked + p {
 .clear{
     margin-top: 30px;
     background-color: #ef4f4f;
-    border: 0;
+    /* border: 0; */
     width: 125px;
     height: 50px;
     font-size: 25px;
     border-radius: 5px;
     color: white;
+    border: 40px;
+    border-color: black;
+}
+
+button:hover{
+  background-color:#af0909;
+  cursor: pointer;
 }
 
 .clear:active{
   box-shadow: 5px 10px #888888;
 };
+
