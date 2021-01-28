@@ -15,26 +15,27 @@
     <br>
     <div class="box">
         <%for(let i=0;i<listItem.length;i++){ %>
-            <div class="item">
-                <input type="checkbox" class="checkbox">
-                <p>
-                    <%=listItem[i] %>
-                </p>
-
-            </div>
+            <form action="/delete" method="POST">
+                <div class="item">
+                    <input onChange="this.form.submit()" type="checkbox" class="checkbox" name="id" value=<%=listItem[i]._id %>>
+                    <p>
+                        <%=listItem[i].name %>
+                    </p>
+                </div>
+            </form>
             <hr>
             <%} %>
 
 
-         <form action="/" method="POST">
-            <input class="new" type="text" name="input" autocomplete=off placeholder="New Item">
+            <form action="/" method="POST">
+                 <input class="new" type="text" name="input" autocomplete=off placeholder="New Item">
 
-             <button class="submit" type="submit">+</button>
-             <hr class="bottom">
-         </form>
+                <button class="submit" type="submit">+</button>
+                    <hr class="bottom">
+            </form>
     </div>
-    <form action="/" method="POST">
-        <button style="cursor: pointer;"class="clear" type="submit" name="clear" value="clear">Clear</button>
+    <form action="/clear" method="POST">
+        <button class="clear" type="submit">Clear</button>
     </form>
 </body>
 
